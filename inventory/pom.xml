@@ -14,8 +14,8 @@
     </parent>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>${jdk.version}</maven.compiler.source>
+        <maven.compiler.target>${jdk.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -26,7 +26,7 @@
         </dependency>
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>utils</artifactId>
+            <artifactId>common</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -36,5 +36,18 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>1.${jdk.version}</source> <!-- Or whatever your source version is -->
+                    <target>1.${jdk.version}</target> <!-- Or whatever your target version is -->
+                    <compilerArgument>-parameters</compilerArgument>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

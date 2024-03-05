@@ -1,4 +1,4 @@
-package com.order.processing.system.utils;
+package com.order.processing.system.common;
 
 import java.io.IOException;
 import java.io.InputStream;

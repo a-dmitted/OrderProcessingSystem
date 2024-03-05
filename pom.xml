@@ -11,11 +11,13 @@
     <modules>
         <module>orders</module>
         <module>inventory</module>
-        <module>utils</module>
+        <module>common</module>
     </modules>
 
     <properties>
         <spring-boot.version>3.2.2</spring-boot.version>
+        <jdk.version>21</jdk.version>
+        <maven.compiler.plugin.version>3.12.1</maven.compiler.plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -26,9 +28,10 @@
             </dependency>
             <dependency>
                 <groupId>com.example</groupId>
-                <artifactId>utils</artifactId>
+                <artifactId>common</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 </project>
